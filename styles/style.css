@@ -1,0 +1,729 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  position: relative;
+}
+body .hamburger-menu-links-container {
+  background-color: rgb(15, 15, 15);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 100%;
+}
+body .hamburger-menu-links-container .hamburger-menu-exit-container {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  border-bottom: 2px solid rgb(48, 48, 48);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+body .hamburger-menu-links-container .hamburger-menu-exit-container .hamburger-menu-exit-button-container {
+  height: 40px;
+  width: 40px;
+  margin-right: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body .hamburger-menu-links-container .hamburger-menu-exit-container .hamburger-menu-exit-button-container .hamburger-menu-exit-button {
+  transform: rotate(45deg);
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  position: absolute;
+}
+body .hamburger-menu-links-container .hamburger-menu-exit-container .hamburger-menu-exit-button-container .hamburger-menu-exit-button::after {
+  content: "";
+  transform: rotate(90deg);
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  position: absolute;
+}
+body .hamburger-menu-links-container .hamburger-links-container {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .hamburger-menu-links-container .hamburger-links-container .hamburger-navigation-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  list-style-type: none;
+}
+body .hamburger-menu-links-container .hamburger-links-container .hamburger-navigation-links li {
+  font-family: sans-serif;
+  font-size: 19px;
+}
+body .hamburger-menu-links-container .hamburger-links-container .hamburger-navigation-links li a {
+  text-decoration: none;
+  color: white;
+}
+body .hamburger-menu-links-container .hamburger-links-container .hamburger-navigation-links li a:hover, body .hamburger-menu-links-container .hamburger-links-container .hamburger-navigation-links li a:active {
+  transition: 0.1s linear all;
+  color: red;
+}
+body .hamburger-menu-links-container.slide-in {
+  animation: right-to-left 0.4s ease-out forwards;
+}
+body .hamburger-menu-links-container.slide-out {
+  animation: left-to-right 0.4s ease-out forwards;
+}
+body .navigation-section {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid rgb(48, 48, 48);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .navigation-section .navigation-bar-container {
+  height: 30px;
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body .navigation-section .navigation-bar-container .navigation-bar {
+  height: 100%;
+}
+body .navigation-section .navigation-bar-container .navigation-bar .navigation-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  list-style-type: none;
+}
+body .navigation-section .navigation-bar-container .navigation-bar .navigation-links a {
+  margin: 0px 35px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+body .navigation-section .navigation-bar-container .navigation-bar .navigation-links a:hover {
+  transition: 0.2s linear all;
+  color: red;
+}
+body .navigation-section .navigation-hamburger-menu-container {
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin-right: 30px;
+  position: relative;
+  cursor: pointer;
+}
+body .navigation-section .navigation-hamburger-menu-container .hamburger-menu {
+  height: 2px;
+  width: 30px;
+  background-color: white;
+}
+body .navigation-section .navigation-hamburger-menu-container .hamburger-menu::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  transform: translateY(10px);
+}
+body .navigation-section .navigation-hamburger-menu-container .hamburger-menu::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  transform: translateY(-10px);
+}
+body .full-portfolio-container {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .introduction-container {
+  height: 500px;
+  width: 1200px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgb(15, 15, 15);
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-text-container {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-text-container p {
+  margin-left: 90px;
+  font-size: 50px;
+  font-family: sans-serif;
+  color: white;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-text-container p .introduction-text-name {
+  color: red;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-call-to-action-container {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-call-to-action-container .call-to-action-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 50px;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-call-to-action-container .call-to-action-container a {
+  margin-left: 40px;
+  color: red;
+  transition: 0.1s all linear;
+}
+body .full-portfolio-container .introduction-container .introduction-container-left .introduction-call-to-action-container .call-to-action-container a:hover {
+  color: white;
+}
+body .full-portfolio-container .introduction-container .introduction-container-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .introduction-container .introduction-container-right .introduction-image-container {
+  width: 70%;
+  padding-bottom: 1em;
+}
+body .full-portfolio-container .introduction-container .introduction-container-right .introduction-image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border: 1.5px solid red;
+  border-radius: 50%;
+}
+body .full-portfolio-container .portfolio-container {
+  width: 1200px;
+  max-width: 100%;
+  background-color: rgb(15, 15, 15);
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .portfolio-container .portfolio-container-title {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  color: white;
+  padding: 1em 0;
+}
+body .full-portfolio-container .portfolio-container .portfolio-container-title .portfolio-title-text {
+  color: red;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5em 0;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers {
+  height: 85%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-left {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-left .project-image-container {
+  height: 70%;
+  width: 90%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-left .project-image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container {
+  width: 95%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: rgb(26, 26, 26);
+  border: 2px solid rgb(48, 48, 48);
+  color: white;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-title {
+  font-family: sans-serif;
+  font-size: 35px;
+  margin-left: 20px;
+  padding: 0.5em 0;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-description {
+  margin-left: 20px;
+  width: 90%;
+  font-family: sans-serif;
+  line-height: 25px;
+  font-size: 17px;
+  padding: 0.5em 0;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-call-to-action-container {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-call-to-action-container li {
+  margin-left: 20px;
+  font-family: sans-serif;
+  padding: 0.5em 0 1em;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-call-to-action-container li a {
+  color: red;
+  text-decoration: none;
+}
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-call-to-action-container li a:hover {
+  transition: 0.1s linear all;
+  color: white;
+}
+body .full-portfolio-container .about-me-container {
+  width: 1200px;
+  max-width: 100%;
+  background-color: rgb(15, 15, 15);
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .about-me-container .about-me-container-title {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  color: white;
+  padding: 1em 0;
+}
+body .full-portfolio-container .about-me-container .about-me-container-title .about-me-text {
+  color: red;
+}
+body .full-portfolio-container .about-me-container .about-me-context-container {
+  height: 85%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+}
+body .full-portfolio-container .about-me-container .about-me-context-container .about-me-container-left {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .about-me-container .about-me-context-container .about-me-container-left .about-me-image-container {
+  height: 60%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+}
+body .full-portfolio-container .about-me-container .about-me-context-container .about-me-container-left .about-me-image-container .about-me-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .full-portfolio-container .about-me-container .about-me-context-container .about-me-container-right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .full-portfolio-container .about-me-container .about-me-context-container .about-me-container-right .about-me-description {
+  width: 100%;
+  font-family: sans-serif;
+  line-height: 25px;
+  font-size: 17px;
+  text-align: justify;
+  background-color: rgb(26, 26, 26);
+  border: 2px solid rgb(48, 48, 48);
+  color: white;
+  padding: 10px;
+}
+body .full-portfolio-container .skills-container {
+  width: 1200px;
+  max-width: 100%;
+  background-color: rgb(15, 15, 15);
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1.5em;
+}
+body .full-portfolio-container .skills-container .skills-container-title {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  color: white;
+  padding: 1em 0;
+}
+body .full-portfolio-container .skills-container .skills-container-title .skills-text {
+  color: red;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container {
+  width: 95%;
+  background-color: rgb(26, 26, 26);
+  border: 2px solid rgb(48, 48, 48);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 10px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skills-containers {
+  margin: 0px 35px;
+  width: 5%;
+  padding: 0.5em 0;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skills-containers .skills-names {
+  font-family: sans-serif;
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 18px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-1 .skill-icon-1 {
+  height: 50px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-2 .skill-icon-2 {
+  height: 50px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-3 .skill-icon-3 {
+  height: 50px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-4 .skill-icon-4 {
+  height: 50px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-5 .skill-icon-5 {
+  height: 50px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-6 .skill-icon-6 {
+  height: 50px;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .skills-container .front-end-skills-container .skill-container-7 .skill-icon-7 {
+  height: 50px;
+}
+body .full-portfolio-container .contact-container {
+  height: 430px;
+  width: 1200px;
+  max-width: 100%;
+  background-color: rgb(15, 15, 15);
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .contact-container .contact-container-title {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  color: white;
+}
+body .full-portfolio-container .contact-container .contact-container-title .contact-title-text {
+  color: red;
+}
+body .full-portfolio-container .contact-container .contact-form-container {
+  height: 75%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .full-portfolio-container .contact-container .contact-form-container .contact {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .full-portfolio-container .contact-container .contact-form-container .contact .contact-form {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body .full-portfolio-container .contact-container .contact-form-container .contact .contact-form .contact-email {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .full-portfolio-container .contact-container .contact-form-container .contact .contact-form .contact-email .email-input {
+  width: 100%;
+  font-size: 17px;
+  padding: 0px 2px;
+  border: 2px solid rgb(48, 48, 48);
+}
+body .full-portfolio-container .contact-container .contact-form-container .contact .contact-form .contact-information {
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 2px;
+  border: 2px solid rgb(48, 48, 48);
+}
+body .full-portfolio-container .contact-container .contact-form-container .contact .contact-form .contact-submit-button {
+  height: 25px;
+  width: 30%;
+  font-family: sans-serif;
+  font-size: 15px;
+  border: solid black 2px;
+  background-color: white;
+}
+
+@media (max-width: 930px) {
+  .introduction-container {
+    height: 700px !important;
+    flex-direction: column !important;
+  }
+  .introduction-container .introduction-container-left {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 95% !important;
+  }
+  .introduction-container .introduction-container-left .introduction-text-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 95% !important;
+  }
+  .introduction-container .introduction-container-left .introduction-text-container p {
+    margin: 0 !important;
+  }
+  .introduction-container .introduction-container-left .introduction-call-to-action-container {
+    width: auto !important;
+  }
+  .introduction-container .introduction-container-left .call-to-action-container {
+    margin: 0 !important;
+  }
+  .introduction-container .introduction-container-left .call-to-action-container a {
+    margin-left: 0 !important;
+    margin: 0px 25px !important;
+  }
+  .introduction-container .introduction-container-right {
+    width: 100% !important;
+  }
+  .introduction-container .introduction-image-container {
+    width: 340px !important;
+  }
+}
+@media (max-width: 880px) {
+  .about-me-container .about-me-context-container {
+    flex-direction: column !important;
+  }
+  .about-me-container .about-me-context-container .about-me-container-left {
+    width: 90% !important;
+  }
+  .about-me-container .about-me-context-container .about-me-container-right {
+    width: 95% !important;
+  }
+  .project-containers {
+    flex-direction: column !important;
+  }
+  .project-containers .project-container-left {
+    width: 100% !important;
+    padding-bottom: 1.5em;
+  }
+  .project-containers .project-container-left .project-images {
+    width: 95% !important;
+  }
+  .project-containers .project-container-right {
+    width: 95% !important;
+  }
+  .introduction-text-container p {
+    margin-left: 50px !important;
+  }
+  .call-to-action-container {
+    margin-left: 10px !important;
+  }
+}
+@media (max-width: 680px) {
+  .navigation-bar {
+    display: none;
+  }
+  .navigation-hamburger-menu-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 460px) {
+  .introduction-text-container p {
+    font-size: 39px !important;
+  }
+}
+@media (max-width: 400px) {
+  .project-description-container {
+    align-items: center !important;
+  }
+  .project-title {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  .project-description {
+    text-align: justify !important;
+    margin: 0 !important;
+  }
+  .project-call-to-action-container {
+    align-self: flex-start !important;
+  }
+}
+@keyframes right-to-left {
+  100% {
+    left: 0%;
+  }
+}
+@keyframes left-to-right {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
