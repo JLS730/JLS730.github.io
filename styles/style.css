@@ -345,6 +345,14 @@ body .full-portfolio-container .portfolio-container .portfolio-projects-containe
   font-size: 17px;
   padding: 0.5em 0;
 }
+body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-email-container {
+  margin-left: 20px;
+  width: 90%;
+  font-family: sans-serif;
+  line-height: 25px;
+  font-size: 17px;
+  padding: 0.5em 0;
+}
 body .full-portfolio-container .portfolio-container .portfolio-projects-container .project-containers .project-container-right .project-description-container .project-call-to-action-container {
   list-style: none;
   display: flex;
